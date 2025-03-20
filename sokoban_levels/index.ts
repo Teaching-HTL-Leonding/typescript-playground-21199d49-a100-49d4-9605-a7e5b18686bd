@@ -46,15 +46,25 @@ function preload() {
 * @returns The corresponding p5.Image object
 */
 function getBlockImageBySymbol(type: string): p5.Image {
-    // <<< Add necessary code here
-    return images[0]; // <<< Replace this code with your implementation
+    switch (type) {
+        case 'X': return images[0];
+        case '.': return images[2];
+        case 'b': return images[3];
+        case 'B': return images[4];
+        default: return images[1];
+    }
 }
 
 // Size of each cell in pixels
 const cellSize = 64;
 
 function setup() {
-    // <<< Add code to create a canvas sized to fit the level dimensions
+    createCanvas(1000, 1000);
+    background("white");
 
-    // <<< Add code to draw level
+    for(const row of level) {
+        for (const cell of row) {
+            
+        }
+    }
 }
