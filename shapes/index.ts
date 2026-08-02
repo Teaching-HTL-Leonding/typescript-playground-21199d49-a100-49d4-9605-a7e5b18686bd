@@ -1,3 +1,2 @@
 function setup() {
-    // test
 }
